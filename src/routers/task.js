@@ -30,8 +30,6 @@ router.get('/tasks', auth, async (req, res) => {
       // value: -1 == desc; 1 == asc
       sort[parts[0]] = (parts[1] === 'desc' ? -1 : 1)
     }
-
-    console.log(sort)
     
     if(req.query.completed){
       match.completed = (req.query.completed === "true")
